@@ -1,5 +1,6 @@
-package edu.iesam.metropolitan_museum.features.museum.data.remote
+package edu.iesam.metropolitan_museum.features.museum.core.api
 
+import edu.iesam.metropolitan_museum.features.museum.data.remote.api.MuseumApiService
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -15,6 +16,7 @@ object MuseumApiClient {
             level = HttpLoggingInterceptor.Level.BODY // Para ver los logs
         })
         .build()
+
     val apiService: MuseumApiService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)

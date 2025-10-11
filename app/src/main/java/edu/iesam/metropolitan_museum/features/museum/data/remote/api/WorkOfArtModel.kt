@@ -1,6 +1,6 @@
-package edu.iesam.metropolitan_museum.features.museum.domain
+package edu.iesam.metropolitan_museum.features.museum.data.remote.api
 
-class WorkOfArt(
+class WorkOfArtModel(
     val objectID: Int,
     val title: String?,
     val artistDisplayName: String?,
