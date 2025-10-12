@@ -10,7 +10,7 @@ class MuseumApiRemoteDataSource(
 ) {
     suspend fun getAllWorkOfArt(): Result<List<WorkOfArtModel>> {
         return withContext(Dispatchers.IO) {
-            val apiService = apiClient.createService(MuseumApiClient::class.java)
+            val apiService = apiClient.createService(MuseumApiService::class.java)
             val resultMuseum = apiService.getAllWorkOfArt()
 
             if (resultMuseum.isSuccessful && resultMuseum.body() != null) {
