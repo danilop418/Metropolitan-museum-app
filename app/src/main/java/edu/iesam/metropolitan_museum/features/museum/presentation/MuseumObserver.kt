@@ -6,14 +6,16 @@ import edu.iesam.metropolitan_museum.features.museum.domain.WorkOfArt
 
 class MuseumObserver {
 
-    private val _selectedWorkOfArt = MutableLiveData<WorkOfArt?>()
-    val selectedArt: LiveData<WorkOfArt?> get() = _selectedArt
+    companion object {
+        private val _selectedArt = MutableLiveData<WorkOfArt?>()
+        val selectedArt: LiveData<WorkOfArt?> get() = _selectedArt
 
-    fun setHero(workOfArt: WorkOfArt) {
-        _selectedArt.value = workOfArt
-    }
+        fun setWorkOfArt(workOfArt: WorkOfArt) {
+            _selectedArt.value = workOfArt
+        }
 
-    fun clear() {
-        _selectedArt.value = null
+        fun clear() {
+            _selectedArt.value = null
+        }
     }
 }
