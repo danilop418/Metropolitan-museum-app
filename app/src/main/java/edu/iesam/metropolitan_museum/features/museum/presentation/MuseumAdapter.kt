@@ -32,8 +32,8 @@ class MuseumAdapter : RecyclerView.Adapter<MuseumAdapter.WorkOfArtViewHolder>() 
     }
 
     inner class WorkOfArtViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val image: ImageView = view.findViewById(R.id.workOfArt_image)
-        private val name: TextView = view.findViewById(R.id.workOfArt_name)
+        private val image: ImageView = view.findViewById(R.id.primaryImage)
+        private val name: TextView = view.findViewById(R.id.)
 
         fun bind(workOfArt: WorkOfArtUiModel) {
             name.text = workOfArt.title

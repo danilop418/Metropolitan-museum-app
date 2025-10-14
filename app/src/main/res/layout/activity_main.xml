@@ -97,7 +97,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="All Heroes"
+                android:text="@string/all_heroes"
                 android:textSize="20sp"
                 android:textColor="@color/pure_white"
                 android:textStyle="bold"

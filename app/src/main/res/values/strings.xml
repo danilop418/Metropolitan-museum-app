@@ -12,20 +12,10 @@
     <string name="banner_title">Discover Your Heroes</string>
     <string name="banner_subtitle">Explore the greatest superheroes of all time</string>
 
-    <!-- Search -->
-    <string name="search_hint">Search heroes...</string>
-
-    <!-- Filters -->
-    <string name="filter_all">All Heroes</string>
-    <string name="filter_marvel">Marvel</string>
-    <string name="filter_dc">DC</string>
-    <string name="filter_independent">Independent</string>
-
     <!-- Results -->
-    <string name="results_count">Showing %d heroes</string>
+    <string name="results_count">Showing %d Work of art</string>
 
     <!-- No results -->
-    <string name="no_results_emoji">🦸‍♂️</string>
     <string name="no_results_title">No heroes found</string>
     <string name="no_results_message">Try adjusting your search or filter criteria</string>
 
@@ -35,5 +25,6 @@
 
     <!-- Content descriptions -->
     <string name="favorite_button_desc">Add to favorites</string>
-    <string name="hero_image_desc">Hero image</string>
+    <string name="WorkOfArt_image_desc">Work of art image</string>
+    <string name="all_WorkOfArt">All Work of art</string>
 </resources>
