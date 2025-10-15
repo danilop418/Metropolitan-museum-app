@@ -48,7 +48,7 @@ class MuseumAdapter : RecyclerView.Adapter<MuseumAdapter.WorkOfArtViewHolder>() 
             medium.text = workOfArt.medium
             dimensions.text = workOfArt.dimensions
 
-            primaryImage.load(workOfArt.image) {
+            primaryImage.load(workOfArt.primaryImage) {
                 crossfade(true)
                 placeholder(R.drawable.ic_launcher_background)
                 error(R.drawable.ic_launcher_foreground)
@@ -63,7 +63,7 @@ class MuseumAdapter : RecyclerView.Adapter<MuseumAdapter.WorkOfArtViewHolder>() 
                     objectDate = workOfArt.objectDate,
                     medium = workOfArt.medium,
                     dimensions = workOfArt.dimensions,
-                    primaryImage = workOfArt.image
+                    primaryImage = workOfArt.primaryImage
                 )
 
                 MuseumObserver.setWorkOfArt(workOfArtDomain)
