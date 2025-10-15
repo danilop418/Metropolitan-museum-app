@@ -37,7 +37,7 @@ class WorkOfArtDetailActivity : AppCompatActivity() {
 
         MuseumObserver.selectedArt.observe(this, Observer { workOfArt ->
             if (workOfArt != null) {
-                bindWorkOfArt(workOfArt)
+                bindWorkOfArt(workOfArt.toUiModel())
             } else {
                 Toast.makeText(this, "No hay obra de arte seleccionada", Toast.LENGTH_SHORT).show()
                 finish()
@@ -46,7 +46,6 @@ class WorkOfArtDetailActivity : AppCompatActivity() {
     }
 
     private fun bindWorkOfArt(workOfArt: WorkOfArtUiModel) {
-        objectID.text = workOfArt.objectID
         title.text = workOfArt.title
         artistDisplayName.text = workOfArt.artistDisplayName
         artistNationality.text = workOfArt.artistNationality
@@ -54,7 +53,7 @@ class WorkOfArtDetailActivity : AppCompatActivity() {
         medium.text = workOfArt.medium
         dimensions.text = workOfArt.dimensions
 
-        primaryImage.load(workOfArt.image) {
+        primaryImage.load(workOfArt.primaryImage) {
             crossfade(true)
             placeholder(R.drawable.ic_launcher_background)
             error(R.drawable.ic_launcher_foreground)

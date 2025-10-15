@@ -32,12 +32,23 @@ class MuseumAdapter : RecyclerView.Adapter<MuseumAdapter.WorkOfArtViewHolder>() 
     }
 
     inner class WorkOfArtViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val image: ImageView = view.findViewById(R.id.primaryImage)
-        private val name: TextView = view.findViewById(R.id.)
+        private val title: TextView = view.findViewById(R.id.title)
+        private val artistDisplayName: TextView = view.findViewById(R.id.artistDisplayName)
+        private val artistNationality: TextView = view.findViewById(R.id.artistNationality)
+        private val objectDate: TextView = view.findViewById(R.id.objectDate)
+        private val medium: TextView = view.findViewById(R.id.medium)
+        private val dimensions: TextView = view.findViewById(R.id.dimensions)
+        private val primaryImage: ImageView = view.findViewById(R.id.primaryImage)
 
         fun bind(workOfArt: WorkOfArtUiModel) {
-            name.text = workOfArt.title
-            image.load(workOfArt.image) {
+            title.text = workOfArt.title
+            artistDisplayName.text = workOfArt.artistDisplayName
+            artistNationality.text = workOfArt.artistNationality
+            objectDate.text = workOfArt.objectDate
+            medium.text = workOfArt.medium
+            dimensions.text = workOfArt.dimensions
+
+            primaryImage.load(workOfArt.image) {
                 crossfade(true)
                 placeholder(R.drawable.ic_launcher_background)
                 error(R.drawable.ic_launcher_foreground)
@@ -45,12 +56,14 @@ class MuseumAdapter : RecyclerView.Adapter<MuseumAdapter.WorkOfArtViewHolder>() 
 
             itemView.setOnClickListener {
                 val workOfArtDomain = WorkOfArt(
-                    id = workOfArt.id,
+                    objectID = workOfArt.objectID,
                     title = workOfArt.title,
-                    artist = workOfArt.artistDisplayName,
-                    date = workOfArt.objectDate,
-                    description = workOfArt.medium,
-                    image = workOfArt.image
+                    artistDisplayName = workOfArt.artistDisplayName,
+                    artistNationality = workOfArt.artistNationality,
+                    objectDate = workOfArt.objectDate,
+                    medium = workOfArt.medium,
+                    dimensions = workOfArt.dimensions,
+                    primaryImage = workOfArt.image
                 )
 
                 MuseumObserver.setWorkOfArt(workOfArtDomain)

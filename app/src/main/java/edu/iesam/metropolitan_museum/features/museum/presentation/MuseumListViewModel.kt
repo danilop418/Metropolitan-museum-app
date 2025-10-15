@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import edu.iesam.metropolitan_museum.features.museum.domain.ErrorApp
 import edu.iesam.metropolitan_museum.features.museum.domain.MuseumGetUseCase
-import edu.iesam.metropolitan_museum.features.museum.domain.WorkOfArt
 import kotlinx.coroutines.launch
 
 class MuseumListViewModel(
@@ -21,7 +20,7 @@ class MuseumListViewModel(
 
     fun loadWorkOfArt() {
         viewModelScope.launch {
-            val result = getAllWorkOfArtUseCase.invoke()
+            val result = getAllWorkOfArtUseCase.fetch()
 
             result.fold(
                 onSuccess = { workOfArtList ->
@@ -29,27 +28,10 @@ class MuseumListViewModel(
                     _error.postValue(null)
                 },
                 onFailure = { err ->
-                    val error = when (err) {
-                        is ErrorApp.InternetConexionError -> ErrorApp.InternetConexionError
-                        is ErrorApp.ServerErrorApp -> ErrorApp.ServerErrorApp
-                        else -> ErrorApp.ServerErrorApp
-                    }
-                    _error.postValue(error)
+                    _error.postValue(ErrorApp.ServerErrorApp)
                     _workOfArtList.postValue(emptyList())
                 }
             )
         }
     }
-
-    private fun WorkOfArt.toUiModel() = WorkOfArtUiModel(
-        id = id,
-        objectID = objectID,
-        title = title,
-        artistDisplayName = artistDisplayName,
-        artistNationality = artistNationality,
-        objectDate = objectDate,
-        medium = medium,
-        dimensions = dimensions,
-        image = primaryImage
-    )
 }

@@ -16,7 +16,7 @@
         android:padding="12dp">
 
         <ImageView
-            android:id="@+id/superHero_image"
+            android:id="@+id/workOfArt_image"
             android:layout_width="64dp"
             android:layout_height="64dp"
             android:scaleType="centerCrop"
@@ -26,7 +26,7 @@
             tools:src="@tools:sample/avatars" />
 
         <TextView
-            android:id="@+id/superHero_name"
+            android:id="@+id/workOfArt_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -37,13 +37,13 @@
             android:maxLines="1"
             android:ellipsize="end"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/superHero_image"
-            app:layout_constraintTop_toTopOf="@+id/superHero_image"
-            app:layout_constraintBottom_toTopOf="@+id/superHero_slug"
+            app:layout_constraintStart_toEndOf="@+id/workOfArt_image"
+            app:layout_constraintTop_toTopOf="@+id/workOfArt_image"
+            app:layout_constraintBottom_toTopOf="@+id/workOfArt_description"
             tools:text="Spider-Man" />
 
         <TextView
-            android:id="@+id/superHero_slug"
+            android:id="@+id/workOfArt_description"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -54,10 +54,10 @@
             android:maxLines="1"
             android:ellipsize="end"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/superHero_image"
-            app:layout_constraintTop_toBottomOf="@+id/superHero_name"
-            app:layout_constraintBottom_toBottomOf="@+id/superHero_image"
-            tools:text="1-spider-man" />
+            app:layout_constraintStart_toEndOf="@+id/workOfArt_image"
+            app:layout_constraintTop_toBottomOf="@+id/workOfArt_name"
+            app:layout_constraintBottom_toBottomOf="@+id/workOfArt_image"
+            tools:text="work of art" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

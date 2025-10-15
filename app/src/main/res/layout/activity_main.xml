@@ -2,6 +2,7 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_gradient">
@@ -97,7 +98,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/all_heroes"
+                android:text="@string/all_WorkOfArt"
                 android:textSize="20sp"
                 android:textColor="@color/pure_white"
                 android:textStyle="bold"
@@ -118,12 +119,6 @@
                 android:gravity="center"
                 android:padding="@dimen/spacing_large"
                 android:visibility="gone">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/no_results_emoji"
-                    android:textSize="64sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
