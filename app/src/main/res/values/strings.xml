@@ -8,7 +8,7 @@
     <string name="header_logo_desc">work of art logo</string>
 
     <!-- Banner -->
-    <string name="banner_image_desc">work of art pics</string>
+    <string name="workOfArt_image_desc">work of art pics</string>
     <string name="banner_title">Discover your work of art</string>
     <string name="banner_subtitle">Explore the greatest work of art of all time</string>
 
