@@ -1,30 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- App -->
-    <string name="app_name">Work of art views</string>
-
-    <!-- Header -->
-    <string name="header_title">work of art views</string>
-    <string name="header_logo_desc">work of art logo</string>
-
-    <!-- Banner -->
-    <string name="workOfArt_image_desc">work of art pics</string>
-    <string name="banner_title">Discover your work of art</string>
-    <string name="banner_subtitle">Explore the greatest work of art of all time</string>
-
-    <!-- Results -->
-    <string name="results_count">Showing %d work of art</string>
-
-    <!-- No results -->
-    <string name="no_results_title">No work of art found</string>
-    <string name="no_results_message">Try adjusting your search or filter criteria</string>
-
-    <!-- Bottom Navigation -->
-    <string name="nav_home">Home</string>
-    <string name="nav_details">Details</string>
-
-    <!-- Content descriptions -->
-    <string name="favorite_button_desc">Add to favorites</string>
-    <string name="WorkOfArt_image_desc">Work of art image</string>
-    <string name="all_WorkOfArt">All Work of art</string>
+    <string name="app_name">Metropolitan Museum</string>
+    <string name="workOfArt_image_desc">Imagen de la obra</string>
 </resources>

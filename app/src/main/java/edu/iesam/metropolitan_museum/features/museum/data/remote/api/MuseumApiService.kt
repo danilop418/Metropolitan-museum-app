@@ -7,7 +7,7 @@ import retrofit2.http.Path
 interface MuseumApiService {
 
     @GET("objects")
-    suspend fun findAll(): Response<WorkOfArtModel>
+    suspend fun findAll(): Response<List<WorkOfArtModel>>
 
     @GET("objects/{id}")
     suspend fun findById(@Path("id") id: String): Response<WorkOfArtModel>

@@ -1,97 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_gradient"
-    tools:context="edu.iesam.metropolitan_museum.features.museum.presentation.WorkOfArtDetailActivity">
+    android:background="#1a1a2e">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <ImageView
-            android:id="@+id/primaryImage"
+            android:id="@+id/artworkImage"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="300dp"
             android:scaleType="centerCrop"
-            tools:src="@tools:sample/backgrounds/scenic"
-            android:contentDescription="@string/WorkOfArt_image_desc" />
+            android:background="#16213e" />
 
         <TextView
-            android:id="@+id/objectID"
+            android:id="@+id/artworkTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:gravity="center"
-            android:fontFamily="sans-serif-black"
-            android:textColor="@color/electric_gold"
-            android:textSize="28sp"
+            android:textSize="24sp"
+            android:textColor="#f39c12"
             android:textStyle="bold"
-            tools:text="Work of art name: " />
+            android:gravity="center" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/artworkArtist"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:textColor="@color/subtle_silver"
-            android:textSize="16sp"
-            tools:text="Work of art title: " />
-
-        <TextView
-            android:id="@+id/artistDisplayName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:textColor="@color/subtle_silver"
-            android:textSize="16sp"
-            tools:text="artist display name: " />
-
-        <TextView
-            android:id="@+id/artistNationality"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:textColor="@color/subtle_silver"
-            android:textSize="16sp"
-            tools:text="artist nationality: " />
-
-        <TextView
-            android:id="@+id/objectDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:textColor="@color/subtle_silver"
-            android:textSize="16sp"
-            tools:text="object date: " />
-
-        <TextView
-            android:id="@+id/medium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:textColor="@color/subtle_silver"
-            android:textSize="16sp"
-            tools:text="medium: " />
-
-        <TextView
-            android:id="@+id/dimensions"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center"
-            android:textColor="@color/subtle_silver"
-            android:textSize="16sp"
-            tools:text="dimensions: " />
+            android:textSize="18sp"
+            android:textColor="#bdc3c7"
+            android:gravity="center" />
 
     </LinearLayout>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</ScrollView>
